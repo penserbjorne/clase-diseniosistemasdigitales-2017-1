@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity rom_triangle is
+entity rom_triangulo is
     port (
         clk  : in  std_logic;
         en   : in  std_logic := '1';
         addr : in  std_logic_vector(10 downto 0);
         data : out std_logic_vector(11 downto 0)
     );
-end rom_triangle;
+end rom_triangulo;
 
-architecture arch of rom_triangle is
+architecture arch of rom_triangulo is
     type memoria_rom is array (0 to 2047) of std_logic_vector (11 downto 0);
     constant ROM : memoria_rom := (
         x"004", x"008", x"00c", x"010", x"014", x"018", x"01c", x"020",

@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity romvicflo is
+entity rom_vicflo is
     port (
         clk  : in  std_logic;
         en   : in  std_logic := '1';
         addr : in  std_logic_vector(10 downto 0);
         data : out std_logic_vector(11 downto 0)
     );
-end romvicflo;
+end rom_vicflo;
 
-architecture arch of romvicflo is
+architecture arch of rom_vicflo is
     type memoria_rom is array (0 to 2047) of std_logic_vector (11 downto 0);
     constant ROM : memoria_rom := (
         x"7f9", x"7ed", x"7e0", x"7d3", x"7c7", x"7ba", x"7ae", x"7a1",
